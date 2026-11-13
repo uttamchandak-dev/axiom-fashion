@@ -1,0 +1,39 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=mysql://axiom_user:axiom_password@mysql:3306/axiom_fashion
+      - JWT_SECRET=dev_docker_test_secret_key_do_not_use_in_production_1234567890
+      - NEXT_PUBLIC_SITE_URL=http://localhost:3000
+      - NODE_ENV=production
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: always
+
+  mysql:
+    image: mysql:8.0
+    container_name: axiom_mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: axiom_fashion
+      MYSQL_USER: axiom_user
+      MYSQL_PASSWORD: axiom_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: always
+
+volumes:
+  mysql_data:
