@@ -1,0 +1,27 @@
+{
+  "common": {
+    "search": "بحث",
+    "cart": "عربة التسوق",
+    "wishlist": "قائمة الأمنيات",
+    "account": "الحساب",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "language": "اللغة",
+    "close": "إغلاق",
+    "acceptAll": "قبول الكل",
+    "necessaryOnly": "الضروري فقط"
+  },
+  "nav": {
+    "shop": "تسوق",
+    "collections": "مجموعات",
+    "journal": "المجلة",
+    "about": "حول"
+  },
+  "product": {
+    "addToCart": "أضف إلى السلة",
+    "outOfStock": "نفذت الكمية",
+    "description": "الوصف",
+    "details": "التفاصيل",
+    "shipping": "الشحن والإرجاع"
+  }
+}

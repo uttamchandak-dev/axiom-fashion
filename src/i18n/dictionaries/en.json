@@ -1,0 +1,27 @@
+{
+  "common": {
+    "search": "Search",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "account": "Account",
+    "login": "Sign In",
+    "logout": "Sign Out",
+    "language": "Language",
+    "close": "Close",
+    "acceptAll": "Accept All",
+    "necessaryOnly": "Necessary Only"
+  },
+  "nav": {
+    "shop": "Shop",
+    "collections": "Collections",
+    "journal": "Journal",
+    "about": "About"
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "description": "Description",
+    "details": "Details",
+    "shipping": "Shipping & Returns"
+  }
+}
